@@ -9,7 +9,7 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 #login system
 
 app = Flask(__name__)
-app.secret_key = '7DcpUCkz/qvDne6W'
+app.secret_key = '<your-secret-key>' #you may use 'openssl rand -base64 12'
 
 login_manager = LoginManager()
 login_manager.init_app(app)
