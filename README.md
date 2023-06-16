@@ -9,6 +9,7 @@ Printing web application with cups
 * Flask
 * Cups
 * Pycups
+* Flask-Login
 
 ## Usage
 
