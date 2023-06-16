@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AS SYNERGY PRINTING SERVICE - Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .heading {
+            color: #333;
+            font-size: 36px;
+            margin-top: 40px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Dashboard</h1>
+        <p>Welcome to your dashboard. Here, you can print by clicking the link below.</p>
+        <a href="/upload">Print</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 import os
 import sys
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 import cups
 import tempfile
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "hello"
+     return render_template('index.html')
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
@@ -20,7 +20,7 @@ def upload():
         with tempfile.NamedTemporaryFile() as fp:
             upload.save(fp.name)
             conn.printFile(app.config['printer_name'], fp.name, 'WebPrinter', {})
-        return '<p>Now printing %s. Go to the printer!</p>' % upload.filename
+        return redirect(url_for('upload', message="File printed successfully"))
 
 if __name__ == '__main__':
     args = sys.argv
