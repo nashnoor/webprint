@@ -1,0 +1,13 @@
+[Unit]
+Description=Your Flask Application
+After=network.target
+
+[Service]
+User=nasrul 
+Group=nasrul    
+WorkingDirectory=/home/nasrul/project/webprint
+ExecStart=/home/nasrul/project/webprint/bin/python3 /home/nasrul/project/webprint/apps.py 5004
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
