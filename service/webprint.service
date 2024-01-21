@@ -3,10 +3,10 @@ Description=Your Flask Application
 After=network.target
 
 [Service]
-User=nasrul 
-Group=nasrul    
-WorkingDirectory=/home/nasrul/project/webprint
-ExecStart=/home/nasrul/project/webprint/bin/python3 /home/nasrul/project/webprint/apps.py 5004
+User=<your-current-user> 
+Group=<your-current-usergroup>    
+WorkingDirectory=/path/to/folder/webprint
+ExecStart=/path/to/folder/webprint/bin/python3 /path/to/folder/webprint/apps.py <port>
 Restart=always
 
 [Install]
